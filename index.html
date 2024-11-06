@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Reservasi Ruangan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistem Reservasi Ruangan Kelas</h1>
+    </header>
+
+    <!-- Daftar Ruangan -->
+    <section id="room-list">
+        <h2>Daftar Ruangan</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Ruangan</th>
+                    <th>Kapasitas</th>
+                    <th>Status Ketersediaan</th>
+                </tr>
+            </thead>
+            <tbody id="room-list-tbody">
+                <!-- Daftar ruangan akan diisi dengan JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Formulir Reservasi -->
+    <section id="reservation-form">
+        <h2>Formulir Reservasi</h2>
+        <form id="form-reservasi">
+            <label for="nama">Nama Pemesan:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="ruangan">Nomor Ruangan:</label>
+            <select id="ruangan" name="ruangan" required>
+                <!-- Opsi ruangan akan diisi dengan JavaScript -->
+            </select>
+
+            <label for="tanggal">Tanggal Reservasi:</label>
+            <input type="date" id="tanggal" name="tanggal" required>
+
+            <label for="waktu">Waktu Mulai:</label>
+            <input type="time" id="waktu" name="waktu" required>
+
+            <label for="durasi">Durasi (Jam):</label>
+            <input type="number" id="durasi" name="durasi" min="1" required>
+
+            <button type="submit">Pesan Ruangan</button>
+        </form>
+        <p id="error-message" style="color: red;"></p>
+    </section>
+
+    <!-- Daftar Reservasi -->
+    <section id="reservation-list">
+        <h2>Daftar Reservasi</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Pemesan</th>
+                    <th>Ruangan</th>
+                    <th>Tanggal</th>
+                    <th>Waktu</th>
+                    <th>Durasi (Jam)</th>
+                </tr>
+            </thead>
+            <tbody id="reservasi-list">
+                <!-- Daftar reservasi akan diisi dengan JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
